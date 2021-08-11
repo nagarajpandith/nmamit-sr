@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.blurred-wrapper-2{
+  height: 100vh;
+  background: url("../images/wallpaper2.jpg") center/cover;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  animation: hue 10s infinite alternate;
+}
+
+.blurred-wrapper-2::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: blur(2rem);
+  z-index: -1;
+  transform: scale(1.15);
+}
+
+@keyframes hue {
+  from{
+      filter: hue-rotate(0);
+  }
+  to{
+      filter: hue-rotate(360deg);
+  }
+}
+
+.about-container{
+  color: #fff;
+  margin: 2% 12%;
+}
+
+.main-header h1 {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.thank {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.btn{
+  padding: 1rem 2rem;
+  border: 2px solid rgba(255,255,255,.5);
+  border-radius: 2.5rem;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.sign-up{
+  color: #fff;
+}
+
+.container{
+  margin-top: 1%;
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  max-width: 1000px;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.1);   
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solidrgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(25px);
+}
+.container::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transform: skewX(-15deg);
+}
+
+.container h3{
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.container .row100{
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+}
+.container .row100 .col{
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  margin: 30px 0 20px;
+}
+.container .row100 .col .inputBox{
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: white;
+}
+.container .row100 .col .inputBox input,
+.container .row100 .col .inputBox textarea{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  padding: 0 10px;
+  z-index: 1;
+  color: #000;
+}
+.container .row100 .col .inputBox .text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0 10px;
+  display: block;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.container .row100 .col .inputBox input:focus + .text,
+.container .row100 .col .inputBox input:valid + .text,
+.container .row100 .col .inputBox textarea:focus + .text,
+.container .row100 .col .inputBox textarea:valid + .text
+{
+  top: -35px;
+  left: -10px;
+}
+.container .row100 .col .inputBox .line{
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.container .row100 .col .inputBox input:focus ~ .line,
+.container .row100 .col .inputBox input:valid ~ .line{
+height: 100%;
+}
+
+.container .row100 .col .inputBox textarea {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  padding: 10px 0;
+}
+
+.container .row100 .col .inputBox textarea:focus ~ .line,
+.container .row100 .col .inputBox textarea:valid ~ .line{
+height: 100%;
+}
+
+.container .row100 .col .submitbtn{
+  width: 60%;
+  border: none;
+  padding: 10px 40px ;
+  cursor: pointer;
+  outline: none;
+  background: white;
+  color: black;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 2.5rem;
+}
+
+@media (min-width:801px){
+  .container{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  }
+
+@media (max-width: 768px){
+  section::before{
+      transform: translate(-200px, -180px);
+  }
+  section::after{
+      transform: translate(220px, 180px);
+  }
+  .container {
+      padding: 20px;
+  }
+  .container h3{
+      font-size: 28px;
+  }
+  .container .row100 .col input[type="sumbit"]{
+    width: 70%;
+}
+}
+
+.name {
+  font-size: medium;
+  color: coral;
+}
+
+.info {
+  font-size: small;
+}
+
+.credit {
+  font-size: xx-small;
+  font-weight: lighter;
+}
