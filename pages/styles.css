@@ -122,6 +122,11 @@ button {
     text-decoration: none;
 }
 
+.accordion_container .container .accordion .body,
+    .accordion_container .container .accordion .header{
+        border-radius: 1rem;
+}
+
 @media (max-width:481px) {
     .accordion_container .container .accordion .body,
     .accordion_container .container .accordion .header{
