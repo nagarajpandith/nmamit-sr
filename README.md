@@ -4,6 +4,8 @@ A complete responsive website built using HTML, CSS and vanilla-tilt.js library.
 <br>
 [Read more](https://nitte.tk/about/about.html) about this project on the website!
 
+<img src="https://github.com/nagarajpandith/nmamit-sr/blob/gh-pages/images/Mockup.png">
+
 ## Version History
 
 * 0.1
