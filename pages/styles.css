@@ -43,6 +43,7 @@ button {
 
 
 .accordion_container .container .accordion .header {
+    border-radius: 2.5rem;
     font-weight: 600;
     display: block;
     width: 100%;
