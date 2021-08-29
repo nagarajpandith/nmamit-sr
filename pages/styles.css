@@ -53,7 +53,7 @@ button {
     border: none;
     padding: 15px;
     color: #444;
-    font-size: 18px;
+    font-size: 17px;
     border-bottom: 2px solid #fff3;
     box-shadow: 0 2px 5px #0005;
     cursor: pointer;
@@ -120,11 +120,6 @@ button {
 
 .btn {
     text-decoration: none;
-}
-
-.accordion_container .container .accordion .body,
-    .accordion_container .container .accordion .header{
-        border-radius: 1rem;
 }
 
 @media (max-width:481px) {
