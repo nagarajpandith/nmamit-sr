@@ -14,14 +14,13 @@ button {
 }
 
 .accordion_container {
-    background-image: url("../images/notes.jpg");
+    background-image: url("../images/dawson-mccormick-IFDDW3nc46E-unsplash.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
     display: flex;
     padding: 0;
-    animation: hue 10s infinite alternate;
 }
 
 .accordion_container .container {
@@ -107,15 +106,6 @@ button {
 
 .accordion_container .container .accordion.active .body {
     padding: 15px;
-}
-
-@keyframes hue {
-    from{
-        filter: hue-rotate(0);
-    }
-    to{
-        filter: hue-rotate(360deg);
-    }
 }
 
 .btn {
